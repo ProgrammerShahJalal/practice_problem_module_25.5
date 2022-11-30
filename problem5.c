@@ -9,21 +9,18 @@
 int recusAdd(int n);
 int main()
 {
-    int n;
+    int n, sum=0;
     scanf("%d", &n);
-    // recusAdd(n);
-    printf("%d\n", (n*(n+1))/2);
+    sum=recusAdd(n);
+    printf("%d\n", sum);
     return 0;
 }
-// int recusAdd(int a) 
-// {  
-//     int sum=0;
-//     if(a == 0)  
-//         return 0; 
-//     else   
-//     {  
-//         printf("%d ", a);
-//         sum+=a+recusAdd(a-1);
-//     }
-//     printf("%d\n", sum);  
-// } 
+int recusAdd(int a)
+{
+    if (a == 0)
+        return a;
+    else
+    {
+        return a + recusAdd(a - 1);
+    }
+}
